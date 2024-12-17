@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Full Page</title>
+    <style>
+        /* Reset and Basic Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            scroll-behavior: smooth;
+            font-family: "Poppins", sans-serif;
+        }
+        :root {
+            --bg-color: #080808;
+            --second-bg-color: #101010;
+            --text-color: white;
+            --main-color: #ea580c;
+        }
+        html {
+            font-size: 60%;
+            overflow-x: hidden;
+        }
+
+        body {
+            background: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        /* Full Page About Section */
+        .about-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: var(--second-bg-color);
+            color: var(--text-color);
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Container for Content */
+        .about-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* About Image */
+        .about-image {
+            flex: 1 1 40%;
+            max-width: 400px;
+            margin-right: 20px;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 50%;
+            box-shadow: 0 0 25px var(--main-color);
+            transition: 0.4s ease-in-out;
+        }
+
+        .about-image img:hover {
+            box-shadow: 0 0 25px var(--main-color), 0 0 50px var(--main-color), 0 0 100px var(--main-color);
+        }
+
+        /* About Content */
+        .about-content {
+            flex: 1 1 60%;
+        }
+
+        .about-content h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-top: 1.5rem;
+        }
+
+        .about-content p {
+            font-size: 1.8rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            background: linear-gradient(270deg, #df8908 10%, #ff1d1d 100%);
+            color: white;
+            font-size: 1.8rem;
+            border: none;
+            border-radius: 3rem;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--second-bg-color);
+            color: var(--text-color);
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Scrollbar Styles */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: var(--main-color);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: var(--bg-color);
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- About Me Section -->
+    <section class="about-section">
+        <div class="about-container">
+            <!-- About Me Image -->
+            <div class="about-image">
+                <img src="ai.jpg" alt="Profile Image">
+            </div>
+
+            <!-- About Me Content -->
+            <div class="about-content">
+                <h1>Hi, I'm <span style="color: var(--main-color);">Girish</span></h1>
+                <p>
+                    I'm a passionate Web Developer with expertise in creating dynamic websites. I love turning ideas into reality using the latest web technologies. 
+                    In my free time, I enjoy learning about new frameworks, experimenting with UI/UX designs, and contributing to open-source projects.
+                </p>
+                <button class="btn" id="read-more-btn">Read More</button>
+
+                <!-- Hidden Extra Info -->
+                <div class="extra-info" id="extra-info" style="display: none;">
+                    <p>
+                        With experience in both frontend and backend technologies, I focus on creating seamless user experiences through beautiful and efficient designs. 
+                        My favorite tools include React, Node.js, and PostgreSQL. I am always excited to learn and grow as a developer.
+                    </p>
+                    <p>
+                        Feel free to explore my <a href="#projects" style="color: var(--main-color);">Projects</a> and <a href="#contact" style="color: var(--main-color);">Contact</a> me for any collaboration.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Girish C K | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        // JavaScript to Toggle the Extra Info
+        const readMoreBtn = document.getElementById('read-more-btn');
+        const extraInfo = document.getElementById('extra-info');
+
+        readMoreBtn.addEventListener('click', () => {
+            extraInfo.style.display = extraInfo.style.display === 'block' ? 'none' : 'block';
+            readMoreBtn.textContent = extraInfo.style.display === 'block' ? 'Read Less' : 'Read More';
+        });
+    </script>
+
+</body>
+</html>

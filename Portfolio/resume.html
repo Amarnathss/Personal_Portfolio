@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Girish CK - Profile</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            scroll-behavior: smooth;
+            font-family: "Poppins", sans-serif;
+        }
+
+        :root {
+            --bg-color: #080808;
+            --second-bg-color: #101010;
+            --text-color: white;
+            --main-color: #ea580c;
+        }
+
+        html {
+            font-size: 60%;
+            overflow-x: hidden;
+        }
+
+        body {
+            background: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        /* Header Styles */
+        .header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            padding: 2rem 15%;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 2rem;
+            color: var(--text-color);
+            font-weight: 800;
+            cursor: pointer;
+        }
+
+        .logo:hover {
+            transform: scale(1.1);
+        }
+
+        .navbar a {
+            font-size: 1.8rem;
+            color: white;
+            margin-left: 4rem;
+            font-weight: 500;
+            transition: .3s ease-in-out;
+            border-bottom: 3px solid transparent;
+        }
+
+        .navbar a:hover {
+            color: var(--main-color);
+            border-bottom: 3px solid var(--main-color);
+        }
+
+        /* Content Styling */
+        .content {
+            padding: 10rem 15%;
+            margin-top: 75px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .content h1 {
+            font-size: 5rem;
+            font-weight: 700;
+            text-align: center;
+            color: var(--main-color);
+        }
+
+        .content p {
+            font-size: 1.6rem;
+            line-height: 1.8;
+            text-align: center;
+            max-width: 800px;
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-size: 3.5rem;
+            color: var(--main-color);
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .section-content {
+            font-size: 1.8rem;
+            color: white;
+            margin-bottom: 3rem;
+        }
+
+        .projects, .skills {
+            display: flex;
+            justify-content: center;
+            gap: 5rem;
+            flex-wrap: wrap;
+        }
+
+        .project-card, .skill-card {
+            background-color: var(--second-bg-color);
+            padding: 2rem;
+            border-radius: 1.5rem;
+            border: 3px solid var(--main-color);
+            text-align: center;
+            width: 250px;
+            transition: 0.3s ease-in-out;
+        }
+
+        .project-card:hover, .skill-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px var(--main-color);
+        }
+
+        .project-card h4, .skill-card h4 {
+            font-size: 2rem;
+            color: var(--main-color);
+            margin-bottom: 1rem;
+        }
+
+        .project-card p, .skill-card p {
+            font-size: 1.4rem;
+            color: white;
+            line-height: 1.6;
+        }
+
+        .footer {
+            background-color: var(--second-bg-color);
+            color: var(--text-color);
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        /* Scrollbar Styling */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: var(--main-color);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: var(--bg-color);
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">
+            Girish CK
+        </div>
+        <div class="navbar">
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>Girish CK</h1>
+        <p>+91 9148280383 | Bangalore, Karnataka | girishck04@gmail.com | <a href="https://github.com" target="_blank" style="color: var(--main-color);">GitHub</a></p>
+
+        <!-- Education Section -->
+        <div id="education" class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="section-content">
+                <h3>RV Institute of Technology and Management</h3>
+                <p>Bachelor of Engineering in Computer Science (2022 – 2026)</p>
+                <h3>AVS Brilliant PU College</h3>
+                <p>Aggregate: 92.5% (2019 - 2021)</p>
+            </div>
+        </div>
+
+        <!-- Skills Section -->
+        <div id="skills" class="section">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills">
+                <div class="skill-card">
+                    <h4>Languages</h4>
+                    <p>C++, HTML, CSS, JavaScript, Python, C, Java</p>
+                </div>
+                <div class="skill-card">
+                    <h4>Frameworks</h4>
+                    <p>NodeJS, ExpressJS, ReactJS</p>
+                </div>
+                <div class="skill-card">
+                    <h4>Databases</h4>
+                    <p>MySQL, PostgreSQL</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects Section -->
+        <div id="projects" class="section">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <h4>Spotify Clone</h4>
+                    <p>Developed a fully responsive Spotify web clone using HTML, CSS, and JavaScript.</p>
+                </div>
+                <div class="project-card">
+                    <h4>Personal Portfolio Website</h4>
+                    <p>Developed a personal portfolio website showcasing skills and projects using HTML, CSS, and JavaScript.</p>
+                </div>
+                <div class="project-card">
+                    <h4>Password Manager</h4>
+                    <p>Created a secure password manager with user authentication and encryption using HTML, CSS, and JavaScript.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Certifications Section -->
+        <div id="certifications" class="section">
+            <h2 class="section-title">Certifications</h2>
+            <div class="section-content">
+                <p>Web Development Bootcamp from Udemy</p>
+                <p>Introduction to Python from Infosys Springboard</p>
+            </div>
+        </div>
+
+        <!-- Extra-Curricular Activities Section -->
+        <div id="activities" class="section">
+            <h2 class="section-title">Extra-Curricular Activities</h2>
+            <div class="section-content">
+                <p>Participated in technical events held by college and school.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Girish CK | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
