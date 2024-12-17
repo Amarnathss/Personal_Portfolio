@@ -10,7 +10,7 @@
     --bg-color: #080808;
     --second-bg-color: #101010;
     --text-color: white;
-    --main-color: #ea580c;
+    --main-color: #0ce6ea;
   }
   html {
     font-size: 60%;
@@ -54,8 +54,8 @@
 
   span{
     background:linear-gradient(270deg ,
-    #DF8908 10%,
-    #ff1d1d 100%);
+    #00ffb36b 10%,
+    #61e8d6 100%);
     background-clip: text;
     color: transparent;
   }
@@ -78,8 +78,8 @@
     font-size: 1.8rem;
     padding: 1rem 2rem;
     background:linear-gradient(270deg ,
-    #DF8908 10%,
-    #ff1d1d 100%);
+    #00ffb36b 10%,
+    #61e8d6 100%);
     letter-spacing: 1px;
     cursor: pointer;
     transition: 0.3s ease-in-out;
